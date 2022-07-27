@@ -1,0 +1,23 @@
+cd /opt/
+Download jdk latest version from the url https://download.oracle.com/java/18/latest/jdk-18_linux-x64_bin.tar.gz
+wget https://download.oracle.com/java/18/latest/jdk-18_linux-x64_bin.tar.gz
+tar -xvf jdk-18_linux-x64_bin.tar.gz
+Need to set home path for Java --- go to vi /etc/profile.d/java.sh
+export JAVA_HOME=/opt/jdk-18.0.2
+export PATH=${JAVA_HOME}/bin:${PATH}
+save it and run source /etc/profile.d/java.sh
+Download maven latest version from the url https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
+wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
+tar -xvf apache-maven-3.8.6-bin.tar.gz
+mv apache-maven-3.8.6 maven
+Add maven home path --- go to ~/.bashrc --- export PATH=/opt/maven/bin:$PATH --- save it and run source ~/.bashrc
+Check maven version by hitting mvn -version
+Hit mvn we need to get build failure message
+------------------< creation of project structure >--------------------------------------------------
+mvn archetype:generate --- creates a project structure
+mvn clean --- cleans the maven project by deleting the target directory
+mvn compiler --- compiles the code
+mvn package --- creates a project structure with a target directory
+mvn install -- installs the packages by downloading from the repo
+mvn deploy -- deploys the code ( build will get fail if we don't have any code)
+mvn validate -- it validates the jar file that is present
