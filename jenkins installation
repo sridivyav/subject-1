@@ -6,4 +6,4 @@ yum install jenkins
 service jenkins start
 service jenkins status
 chkconfig jenkins on
-<ec2publicurl>:8080
+<ec2publicDNSurl>:8080
