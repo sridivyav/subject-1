@@ -1,0 +1,25 @@
+<<<----- docker ce installation ----->>>
+dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+dnf list docker-ce
+dnf install docker-ce --nobest -y
+systemctl start docker
+systemctl enable docker
+docker --version
+<<<----- docker commands ----->>>
+docker ps ---- to list out containers that are running
+docker ps -a --- to list out all the containers
+docker run -it <image name>  --- to run a docker image
+ctrl+p+q --- to come out from the container
+docker stop <container id> --- to stop docker continer
+docker start < container id>  -- to start docker container
+docker history <image id> --- to find out the history of that image
+docker rmi <image name> -- to remove image ( that container should be in stop state )
+docker rm <container id> -- to remove container
+docker rm -f < container id> -- to remove container forcefully
+<<<<< ---- DOCKER FILE ---- >>>>>
+FROM roboxes/rhel8
+
+MAINTAINER Rishi rishimallik91@gmail.com
+
+RUN yum install wget -y
+<<<<< ---- DOCKER FILE ---- >>>>>
