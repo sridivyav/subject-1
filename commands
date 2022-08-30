@@ -1,0 +1,35 @@
+git init --> for initialising sample git repository
+git config --global user.name "<username>"
+git config --global user.email "<email id>"
+create some new files f1 f2 f3 f4
+git status
+git add * / git add <file name>
+git status
+git commit -m "committed by <user>" <filename>
+git status
+git clone https://github.com/rishimallik91/sample.git
+git clone https://github.com/rishimallik91/test-repo.git
+git remote add test-repo https://github.com/rishimallik91/test-repo.git
+git push --set-upstream test-repo master
+git remote add origin <url>
+git remote -v
+git push -u origin master
+git commit -am "recent commit"
+git branch	List branches (the asterisk denotes the current branch)
+git branch -a	List all branches (local and remote)
+git branch [branch name]	Create a new branch
+git branch -d [branch name]	Delete a branch
+git push origin --delete [branch name]	Delete a remote branch
+git checkout -b [branch name]	Create a new branch and switch to it
+git checkout -b [branch name] origin/[branch name]	Clone a remote branch and switch to it
+git branch -m [old branch name] [new branch name]	Rename a local branch
+git checkout [branch name]	Switch to a branch
+git checkout -	Switch to the branch last checked out
+git checkout -- [file-name.txt]	Discard changes to a file
+git merge [branch name]	Merge a branch into the active branch
+git merge [source branch] [target branch]	Merge a branch into a target branch
+git stash	Stash changes in a dirty working directory
+git stash clear	Remove all stashed entries
+git branch -d branch name -- to delete a branch
+git checkout -b new beanch name -- to create and switch to a branch in a single step
+git clone -b <branch name> https://github.com/rishimallik91/test-repo.git   ---- to clone specific branch in a repository
