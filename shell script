@@ -1,0 +1,15 @@
+creation vi <scriptname.sh>   --- creating shell script
+chmod 777 <scriptname.sh>     --- Giving full permissions
+./<scriptname.sh>             --- Executing shell script
+----------------------------------------------------------
+#!/bin/sh
+echo "Good Morning"
+echo "Creating a directory....."
+mkdir DevOps
+echo "Entering into DevOps directory"
+cd DevOps
+echo "Creating a file inside directory"
+touch test-file
+echo "Deleting test-file"
+rm -rf test-file
+echo "Deletion successful"
