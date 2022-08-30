@@ -1,0 +1,25 @@
+Launch an Amazon Linux Machine
+yum update -y 
+yum install python
+yum install pip -y
+pip install ansible
+ansible --version ( You will be seeing config file as none )
+cd /etc/
+mkdir ansible
+cd ansible
+mkdir roles and touch ansible.cfg and touch hosts
+Check ansible --version ( Now you will get the default directory structure )
+Create user ansadmin and give password
+useradd ansadmin
+passwd ansadmin
+Give root priveleges to ansadmin by going to visudo
+Need to change password authentication as YES by going into vi /etc/ssh/sshd_config
+sudo systemctl restart sshd
+Switch to the user ansadmin by sudo su ansadmin
+You need to create same useransadmin and follow the same procedure as mentioned above (From step12 - step18)
+Generate key by using ssh-keygen
+cd /home/ansadmin/.ssh
+Go to .ssh/ and you will find private key(id_rsa) and public key (id_rsa_pub)  
+Now we need to connect to other node by using this key by using command ssh-copy-id <ip address>
+Go vi hosts and add the node ip address over there,save it 
+Hit ansible all -m ping -i hosts
